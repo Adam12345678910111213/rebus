@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>404 - Stránka sa nenašla</title>
+    <style>
+        body {
+            background-color: #05070f;
+            color: #d13434; /* Červená chybová farba */
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding-top: 80px;
+        }
+        .error-container {
+            max-width: 600px;
+            margin: 0 auto;
+            border: 2px dashed #d13434;
+            padding: 30px;
+            background-color: #0b0f19;
+            border-radius: 8px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            max-height: 300px;
+            margin-top: 20px;
+            filter: grayscale(100%);
+        }
+        /* SKRYTÁ INDÍCIA: Chyba v systéme. Signál bol prerušený. Zadaj do URL ďalšie slovo 'cislo' */
+    </style>
+</head>
+<body>
+
+    <div class="error-container">
+        <h1>CHYBA 404</h1>
+        <p><strong>⚠️ ERROR: STRÁNKA BOLA ZMAZANÁ ALEBO NEEXISTUJE!</strong></p>
+        <p style="color: #667da6; font-size: 0.9em;">Prepojenie so serverom zlyhalo. Skontrolujte syntax adresného riadku.</p>
+        
+        <!-- Obrázok rozbitej televízie -->
+        <img src="televizia.jpg" alt="Chyba signálu">
+        
+        <p style="color: #3b485c; margin-top: 30px; font-size: 0.8em;">Kód chyby: 0x80070002 (Ctrl+U pre diagnostiku logu)</p>
+    </div>
+
+</body>
+</html>

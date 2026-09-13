@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Úroveň 1: Začiatok tajomstva</title>
+    <style>
+        body { background-color: #0b0f19; color: #fff; font-family: Arial, sans-serif; text-align: center; padding-top: 50px; }
+        .container { max-width: 600px; margin: 0 auto; }
+        img { max-width: 100%; height: auto; max-height: 450px; border: 3px solid #1f293d; border-radius: 8px; box-shadow: 0 0 20px rgba(255, 140, 0, 0.2); cursor: pointer; }
+        /* SKRÝVA SA TU NIEČO? SKÚS ROZLÚŠTIŤ MORSEVKU NA NOČNOM STOLÍKU, AK OBRÁZOK DOSVETLÍŠ V EDITORE */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Úroveň 1</h1>
+        <p>Klikni na tajomné dvere na obrázku a zadaj kúzlo, ktoré ťa pustí ďalej.</p>
+        <img src="dvere.jpg" alt="Hádanka" onclick="overHeslo()">
+        <p style="color: #3f4e6b; margin-top: 40px;">Nápovedu hľadaj v tme obrázka...</p>
+    </div>
+    <script>
+        function overHeslo() {
+            var meno = prompt("Zadaj meno používateľa:");
+            var heslo = prompt("Zadaj heslo:");
+            if (btoa(meno) === "dm9vZG9v" && btoa(heslo) === "bWFnaWM=") {
+                alert("Správne! Otvoril si dvere do ďalšej úrovne.");
+                window.location.href = "kavata.html"; 
+            } else {
+                alert("Nesprávne kúzlo! Skús to znova.");
+            }
+        }
+    </script>
+</body>
+</html>

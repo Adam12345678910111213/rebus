@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Úroveň 10: Koniec sveta</title>
+    <style>
+        body { background-color: #05070f; color: #fff; font-family: Arial, sans-serif; text-align: center; padding-top: 50px; }
+        .container { max-width: 600px; margin: 0 auto; }
+        img { max-width: 100%; height: auto; max-height: 450px; border: 3px solid #1f293d; border-radius: 8px; box-shadow: 0 0 30px rgba(147, 112, 219, 0.4); cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Úroveň 10 – FINÁLE</h1>
+        <p>Dosiahol si hranicu vesmíru. Klikni na nekonečno a zadaj finálne heslo, ktoré ukončí túto simuláciu.</p>
+        <img src="vesmir.jpg" alt="Vesmír" onclick="skontrolujFinale()">
+        <p style="color: #3f4e6b; margin-top: 40px;">Posledná nápoveda: Odpoveď na otázku života, vesmíru a všetkého (podľa Stopárovho sprievodcu galaxiou).</p>
+    </div>
+    <script>
+        function skontrolujFinale() {
+            var odpoved = prompt("Zadaj finálnu odpoveď:");
+            // MjI= je zašifrované číslo 42
+            if (btoa(odpoved) === "NDI=") {
+                alert("Simulácia úspešne ukončená. Vyhral si!");
+                window.location.href = "koniec.html"; 
+            } else {
+                alert("Vesmír neodpovedá. Skús to znova.");
+            }
+        }
+    </script>
+</body>
+</html>

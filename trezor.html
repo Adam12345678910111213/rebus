@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Úroveň 4: Kód od trezoru</title>
+    <style>
+        body { background-color: #0b0f19; color: #fff; font-family: Arial, sans-serif; text-align: center; padding-top: 50px; }
+        .container { max-width: 600px; margin: 0 auto; }
+        img { max-width: 100%; height: auto; max-height: 450px; border: 3px solid #1f293d; border-radius: 8px; box-shadow: 0 0 20px rgba(255, 0, 0, 0.3); cursor: pointer; }
+        /* NÁPOVEDA: V akom roku bol spustený herný rébus, ktorým sa inšpirujeme? (Zisti na internete) */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Úroveň 4</h1>
+        <p>Tento starý trezor vyžaduje 4-miestny číselný kód. Klikni na zámok a zadaj ho.</p>
+        <img src="zamok.jpg" alt="Trezor" onclick="overKod()">
+        <p style="color: #3f4e6b; margin-top: 40px;">Ak nepoznáš správny kód, skús stlačiť Ctrl + U a zamyslieť sa nad indíciou.</p>
+    </div>
+    <script>
+        function overKod() {
+            var kod = prompt("Zadaj 4-miestny číselný kód:");
+            if (btoa(kod) === "MjAwNA==") {
+                alert("Cvak... Trezor sa otvoril! Postupuješ do ďalšej úrovne.");
+                window.location.href = "kazeta.html"; 
+            } else {
+                alert("Nesprávny kód! Zámok sa ani nepohol.");
+            }
+        }
+    </script>
+</body>
+</html>
